@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Variables
+REMOTE_USER="your-ec2-user" # Replace with the username of your EC2 instance
+REMOTE_HOST="your-ip-ec2" # Replace with the IP address of your EC2 instance
+SPARK_DIR="/opt/spark" # Directory where Apache Spark is located on the EC2 instance
+
+# Copy script trainWithEmrfs.py
+scp trainWithEmrfs.py $REMOTE_USER@$REMOTE_HOST:$SPARK_DIR
+
+# Copy script trainWithHdfs.py
+scp trainWithHdfs.py $REMOTE_USER@$REMOTE_HOST:$SPARK_DIR
